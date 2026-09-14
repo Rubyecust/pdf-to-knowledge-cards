@@ -1,0 +1,42 @@
+{
+  "pdf_processing": {
+    "extract_text": true,
+    "extract_tables": true,
+    "extract_images": false,
+    "language": "zh"  // "zh" for Chinese, "en" for English
+  },
+  "text_summarization": {
+    "model": "facebook/bart-large-cnn",
+    "max_length": 100,
+    "min_length": 30,
+    "enable_keywords": true,
+    "num_keywords": 5
+  },
+  "card_generation": {
+    "templates": ["minimal", "social", "mindmap"],
+    "default_template": "minimal"
+  },
+  "image_export": {
+    "platforms": {
+      "instagram": {
+        "width": 1080,
+        "height": 1350
+      },
+      "xiaohongshu": {
+        "width": 1080,
+        "height": 1440
+      },
+      "twitter": {
+        "width": 1200,
+        "height": 675
+      }
+    },
+    "quality": 95,
+    "format": "PNG"
+  },
+  "output": {
+    "base_dir": "./output",
+    "create_subdirs": true,
+    "formats": ["markdown", "instagram", "xiaohongshu"]
+  }
+}
